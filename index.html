@@ -68,7 +68,7 @@
       <img src="boton-whatsapp-reino-unido.png" alt="WhatsApp Inglés" class="w-9 h-9 object-contain pointer-events-none" loading="lazy" />
     </a>
   </div>
-
+  
   <!-- SELECTOR DE IDIOMA -->
   <section id="selector-idioma" class="py-4 bg-white border-b dark:bg-neutral">
     <div class="max-w-6xl mx-auto flex items-center justify-center gap-8">
@@ -254,7 +254,7 @@
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
     /* ---------- CERRAMIENTOS GALLERY ---------- */
-     const cerramientosData=[
+       const cerramientosData=[
       {folder:'1.0',count:5,videos:{4:'https://www.youtube.com/shorts/y8LEcdlvht0'}},
       {folder:'2.0',count:7,videos:{1:'https://youtube.com/shorts/Ko_-ksafMe0',5:'https://youtube.com/shorts/v_twrab3yKk'}},
       {folder:'3.0',count:6,videos:{}},
@@ -266,15 +266,15 @@
       // If full YouTube Shorts URL
       if(urlOrId.includes('/shorts/')){
         const id=urlOrId.split('/shorts/')[1].split(/[?&]/)[0];
-        return `https://www.youtube.com/embed/${id}`;
+        return https://www.youtube.com/embed/${id};
       }
       // If full watch?v= URL
       if(urlOrId.includes('watch?v=')){
         const id=urlOrId.split('watch?v=')[1].split('&')[0];
-        return `https://www.youtube.com/embed/${id}`;
+        return https://www.youtube.com/embed/${id};
       }
       // Assume plain ID
-      return `https://www.youtube.com/embed/${urlOrId}`;
+      return https://www.youtube.com/embed/${urlOrId};
     }
 
     function buildCerramientosGallery(){
@@ -294,8 +294,8 @@
             row.appendChild(iframe);
           }else{
             const img=document.createElement('img');
-            img.src=`${basePath}${folder}/${prefix}.${i}.jpg`;
-            img.alt=`Cerramientos ${prefix}.${i}`;
+            img.src=${basePath}${folder}/${prefix}.${i}.jpg;
+            img.alt=Cerramientos ${prefix}.${i};
             img.loading='lazy';
             row.appendChild(img);
           }
