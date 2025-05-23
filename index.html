@@ -4,75 +4,60 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cortinas de<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark:bg-neutral dark:text-gray-100">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Cortinas de vidrio, reformas integrales, cerramientos de aluminio y carpintería en Alicante. Transformamos tu casa en el hogar de tus sueños." />
   <meta name="keywords" content="reformas en Alicante, cortinas de vidrio,cerramientos aluminio, reformas integrales, cerramientos aluminio, carpintería, albañilería," />
   <link rel="canonical" href="https://tunuevohogar.es/" />
   <meta property="og:title" content="Tu nuevo hogar – Reformas en Alicante" />
-  <meta property="og:description" content="Expertos en reformas integrales, cerramientos e instalaciones. Presupuesto gratuito en 24 h." />
+  <meta property="og:description" content="Expertos en reformas integrales, cerramientos e instalaciones. Presupuesto gratuito en 24 h." />
   <meta property="og:image" content="https://tunuevohogar.es/share.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>Tu nuevo hogar – Cortinas de vidrio en Alicante y alrededores</title>
-
+  <title>Tu nuevo hogar – Cortinas de vidrio en Alicante y alrededores</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config={
-      darkMode:'class',
-      theme:{
-        extend:{
-          fontFamily:{poppins:['Poppins','sans-serif']},
-          colors:{
-            primary:'#fb9010',secondary:'#e7d00d',accent:'#ff0f0e',
-            neutral:'#000000',background:'#f1f1f1'
-          },
-          keyframes:{
-            fadeIn:{'0%':{opacity:'0',transform:'translateY(1rem)'},
-                    '100%':{opacity:'1',transform:'translateY(0)'}}
-          },
-          animation:{fadeIn:'fadeIn 0.6s ease-out forwards'}
-        }
-      }
-    };
+    tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{poppins:['Poppins','sans-serif']},colors:{primary:'#fb9010',secondary:'#e7d00d',accent:'#ff0f0e',neutral:'#000000',background:'#f1f1f1'},keyframes:{fadeIn:{'0%':{opacity:'0',transform:'translateY(1rem)'},'100%':{opacity:'1',transform:'translateY(0)'}}},animation:{fadeIn:'fadeIn 0.6s ease-out forwards'}}}};
   </script>
-
   <style>
     body{font-family:'Poppins',sans-serif}
     :focus-visible{outline:2px solid #fb9010;outline-offset:2px}
     details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
     details summary::-webkit-details-marker{display:none}
-    details summary::after{
-      content:'›';font-size:1.1rem;transition:transform .3s ease;margin-left:.5rem;
-      width:1.75rem;height:1.75rem;border-radius:50%;background:#ff0f0e;color:#fff;
-      display:flex;align-items:center;justify-content:center
-    }
+    details summary::after{content:'›';font-size:1.1rem;transition:transform .3s ease;margin-left:.5rem;width:1.75rem;height:1.75rem;border-radius:50%;background:#ff0f0e;color:#fff;display:flex;align-items:center;justify-content:center}
     details[open] summary::after{transform:rotate(90deg)}
     .row-scroll{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem}
     .row-scroll>*{scroll-snap-align:start;flex:0 0 auto}
-    .row-scroll img,.row-scroll video,.row-scroll iframe{
-      height:10rem;border-radius:.75rem;box-shadow:0 2px 8px rgba(0,0,0,.1)
-    }
+    .row-scroll img,.row-scroll video,.row-scroll iframe{height:10rem;border-radius:.75rem;box-shadow:0 2px 8px rgba(0,0,0,.1)}
   </style>
 </head>
 <body class="bg-background text-neutral dark:text-gray-100 selection:bg-primary/20">
 
-<!-- ====== HEADER ====== -->
-<header class="bg-white shadow-md sticky top-0 z-50 dark:bg-neutral dark:shadow-none">
-  <div class="max-w-6xl mx-auto flex items-center p-4">
-    <div class="flex items-center gap-4">
-      <img src="logo.png" alt="Logo Tu nuevo hogar" class="w-14 h-14 object-contain" loading="lazy" />
-      <div>
-        <h1 class="text-2xl font-bold text-primary" data-i18n="brand">Tu nuevo hogar</h1>
-        <p class="text-sm text-gray-600 dark:text-gray-300" data-i18n="tagline">Expertos en cerramientos de cristal y reformas</p>
+  <!-- HEADER -->
+  <header class="bg-white shadow-md sticky top-0 z-50 dark:bg-neutral dark:shadow-none">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <!-- Logo & brand -->
+      <div class="flex items-center gap-4">
+        <img src="logo.png" alt="Logo Tu nuevo hogar" class="w-14 h-14 object-contain" loading="lazy" />
+        <div>
+          <h1 class="text-2xl font-bold text-primary" data-i18n="brand">Tu nuevo hogar</h1>
+          <p class="text-sm text-gray-600 dark:text-gray-300" data-i18n="tagline">Expertos en cerramientos de cristal y reformas</p>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
 
- <!-- FLOATING WHATSAPP BUTTONS -->
+      <!-- Call‑to‑action button -->
+      <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-2xl shadow-md hover:bg-primary/80 transition" data-i18n="contact_button">📞 Contáctanos</a>
+    </div>
+  </header>
+
+  <!-- FLOATING WHATSAPP BUTTONS -->
   <div class="fixed bottom-4 right-4 flex flex-col gap-3 z-50">
     <a href="https://wa.me/34626035354" target="_blank" aria-label="WhatsApp Alemán" class="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full shadow-lg bg-white dark:bg-neutral hover:scale-110 transition">
       <img src="boton-whatsapp-aleman.png" alt="WhatsApp Alemán" class="w-9 h-9 object-contain pointer-events-none" loading="lazy" />
@@ -81,27 +66,24 @@
       <img src="boton-whatsapp-reino-unido.png" alt="WhatsApp Inglés" class="w-9 h-9 object-contain pointer-events-none" loading="lazy" />
     </a>
   </div>
- <!-- Call‑to‑action button -->
-      <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-2xl shadow-md hover:bg-primary/80 transition" data-i18n="contact_button">📞 Contáctanos</a>
+  
+  <!-- SELECTOR DE IDIOMA -->
+  <section id="selector-idioma" class="py-4 bg-white border-b dark:bg-neutral">
+    <div class="max-w-6xl mx-auto flex items-center justify-center gap-8">
+      <button data-lang="es" class="flex flex-col items-center text-xs focus:outline-none group">
+        <img src="lang-es.png" alt="Español" class="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition" loading="lazy" />
+        <span class="mt-1">Español</span>
+      </button>
+      <button data-lang="de" class="flex flex-col items-center text-xs focus:outline-none group">
+        <img src="lang-de.png" alt="Deutsch" class="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition" loading="lazy" />
+        <span class="mt-1">Deutsch</span>
+      </button>
+      <button data-lang="en" class="flex flex-col items-center text-xs focus:outline-none group">
+        <img src="lang-en.png" alt="English" class="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition" loading="lazy" />
+        <span class="mt-1">English</span>
+      </button>
     </div>
-  </header>
-<!-- ====== SELECTOR IDIOMA ====== -->
-<section id="selector-idioma" class="py-4 bg-white border-b dark:bg-neutral">
-  <div class="max-w-6xl mx-auto flex items-center justify-center gap-8">
-    <button data-lang="es" class="flex flex-col items-center text-xs focus:outline-none group">
-      <img src="lang-es.png" alt="Español" class="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition" loading="lazy" />
-      <span class="mt-1">Español</span>
-    </button>
-    <button data-lang="de" class="flex flex-col items-center text-xs focus:outline-none group">
-      <img src="lang-de.png" alt="Deutsch" class="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition" loading="lazy" />
-      <span class="mt-1">Deutsch</span>
-    </button>
-    <button data-lang="en" class="flex flex-col items-center text-xs focus:outline-none group">
-      <img src="lang-en.png" alt="English" class="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition" loading="lazy" />
-      <span class="mt-1">English</span>
-    </button>
-  </div>
-</section>
+  </section>
 
   <main>
     <!-- SERVICIOS -->
