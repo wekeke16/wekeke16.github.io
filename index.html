@@ -47,29 +47,16 @@
         </div>
       </div>
 
-      <!-- Icons right -->
-      <div class="flex items-center gap-2 md:gap-4">
-        <!-- Theme toggle -->
-        <button id="theme-toggle" aria-label="Cambiar tema" class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-primary/20 dark:hover:bg-primary/20 transform hover:scale-110 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" class="w-5 h-5">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12H2m15.36 6.36l.71.71M6.34 6.34l-.71-.71m0 12.02l.71-.71M17.66 6.34l-.71-.71M12 5a7 7 0 100 14 7 7 0 000-14z" />
-          </svg>
-        </button>
-
-        <!-- WhatsApp Alemán -->
-        <a href="https://wa.me/34626035354" target="_blank" aria-label="WhatsApp Alemán" class="transform hover:scale-110 transition">
-          <img src="boton-whatsapp-aleman.png" alt="WhatsApp Alemán" class="w-8 h-8 md:w-10 md:h-10 object-contain" loading="lazy" />
-        </a>
-
-        <!-- WhatsApp Inglés -->
-        <a href="https://wa.me/34672031241" target="_blank" aria-label="WhatsApp Inglés" class="transform hover:scale-110 transition">
-          <img src="boton-whatsapp-reino-unido.png" alt="WhatsApp Inglés" class="w-8 h-8 md:w-10 md:h-10 object-contain" loading="lazy" />
-        </a>
-      </div>
+      <!-- Theme toggle only -->
+      <button id="theme-toggle" aria-label="Cambiar tema" class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-primary/20 dark:hover:bg-primary/20 transform hover:scale-110 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12H2m15.36 6.36l.71.71M6.34 6.34l-.71-.71m0 12.02l.71-.71M17.66 6.34l-.71-.71M12 5a7 7 0 100 14 7 7 0 000-14z" />
+        </svg>
+      </button>
     </div>
   </header>
 
-   <!-- FLOATING WHATSAPP BUTTONS -->
+  <!-- FLOATING WHATSAPP BUTTONS -->
   <div class="fixed bottom-4 right-4 flex flex-col gap-3 z-50">
     <!-- WhatsApp Alemán -->
     <a href="https://wa.me/34626035354" target="_blank" aria-label="WhatsApp Alemán" class="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full shadow-lg bg-white dark:bg-neutral hover:scale-110 transition">
@@ -81,7 +68,7 @@
       <img src="boton-whatsapp-reino-unido.png" alt="WhatsApp Inglés" class="w-9 h-9 object-contain pointer-events-none" loading="lazy" />
     </a>
   </div>
-  
+
   <!-- SELECTOR DE IDIOMA -->
   <section id="selector-idioma" class="py-4 bg-white border-b dark:bg-neutral">
     <div class="max-w-6xl mx-auto flex items-center justify-center gap-8">
