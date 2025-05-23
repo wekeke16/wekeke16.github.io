@@ -4,32 +4,65 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cortinas de vidrio, reformas integrales, cerramientos de aluminio y carpintería en Alicante. Transformamos tu casa en el hogar de tus sueños." />
-  <meta name="keywords" content="reformas en Alicante, cortinas de vidrio,cerramientos aluminio, reformas integrales, cerramientos aluminio, carpintería, albañilería," />
+  <meta name="description" content="Reformas integrales, cerramientos de aluminio y carpintería en Alicante. Transformamos tu casa en el hogar de tus sueños." />
+  <meta name="keywords" content="reformas en Alicante, reformas integrales, cerramientos aluminio, carpintería, albañilería, cortinas de vidrio" />
   <link rel="canonical" href="https://tunuevohogar.es/" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Tu nuevo hogar – Reformas en Alicante" />
-  <meta property="og:description" content="Expertos en reformas integrales, cerramientos e instalaciones. Presupuesto gratuito en 24 h." />
+  <meta property="og:description" content="Expertos en reformas integrales, cerramientos e instalaciones. Presupuesto gratuito en 24 h." />
   <meta property="og:image" content="https://tunuevohogar.es/share.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>Tu nuevo hogar – Cortinas de vidrio en Alicante y alrededores</title>
+
+  <title>Tu nuevo hogar – Reformas en Alicante</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{poppins:['Poppins','sans-serif']},colors:{primary:'#fb9010',secondary:'#e7d00d',accent:'#ff0f0e',neutral:'#000000',background:'#f1f1f1'},keyframes:{fadeIn:{'0%':{opacity:'0',transform:'translateY(1rem)'},'100%':{opacity:'1',transform:'translateY(0)'}}},animation:{fadeIn:'fadeIn 0.6s ease-out forwards'}}}};
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          colors: {
+            primary: '#fb9010',
+            secondary: '#e7d00d',
+            accent:   '#ff0f0e',
+            neutral:  '#000000',
+            background: '#f1f1f1',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(1rem)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: { fadeIn: 'fadeIn 0.6s ease-out forwards' },
+        },
+      },
+    };
   </script>
+
   <style>
     body{font-family:'Poppins',sans-serif}
     :focus-visible{outline:2px solid #fb9010;outline-offset:2px}
+
+    /* Summary arrow */
     details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
     details summary::-webkit-details-marker{display:none}
     details summary::after{content:'›';font-size:1.25rem;transition:transform .3s ease;margin-left:.5rem}
     details[open] summary::after{transform:rotate(90deg)}
+
+    /* Horizontal row gallery */
     .row-scroll{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem}
     .row-scroll>*{scroll-snap-align:start;flex:0 0 auto}
-    .row-scroll img,.row-scroll video,.row-scroll iframe{height:10rem;border-radius:.75rem;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    .row-scroll img,.row-scroll video{height:10rem;border-radius:.75rem;box-shadow:0 2px 8px rgba(0,0,0,.1)}
   </style>
 </head>
 <body class="bg-background text-neutral dark:text-gray-100 selection:bg-primary/20">
@@ -43,32 +76,32 @@
         <img src="logo.png" alt="Logo Tu nuevo hogar" class="w-14 h-14 object-contain" loading="lazy" />
         <div>
           <h1 class="text-2xl font-bold text-primary" data-i18n="brand">Tu nuevo hogar</h1>
-          <p class="text-sm text-gray-600 dark:text-gray-300" data-i18n="tagline">Expertos en cerramientos de cristal y reformas</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300" data-i18n="tagline">Atención al detalle en cada proyecto</p>
         </div>
       </div>
 
-      <!-- Theme toggle only -->
-      <button id="theme-toggle" aria-label="Cambiar tema" class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-primary/20 dark:hover:bg-primary/20 transform hover:scale-110 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" class="w-5 h-5">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12H2m15.36 6.36l.71.71M6.34 6.34l-.71-.71m0 12.02l.71-.71M17.66 6.34l-.71-.71M12 5a7 7 0 100 14 7 7 0 000-14z" />
-        </svg>
-      </button>
+      <!-- Icons right -->
+      <div class="flex items-center gap-2 md:gap-4">
+        <!-- Theme toggle -->
+        <button id="theme-toggle" aria-label="Cambiar tema" class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-primary/20 dark:hover:bg-primary/20 transform hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12H2m15.36 6.36l.71.71M6.34 6.34l-.71-.71m0 12.02l.71-.71M17.66 6.34l-.71-.71M12 5a7 7 0 100 14 7 7 0 000-14z" />
+          </svg>
+        </button>
+
+        <!-- WhatsApp Alemán -->
+        <a href="https://wa.me/34626035354" target="_blank" aria-label="WhatsApp Alemán" class="transform hover:scale-110 transition">
+          <img src="boton-whatsapp-aleman.png" alt="WhatsApp Alemán" class="w-8 h-8 md:w-10 md:h-10 object-contain" loading="lazy" />
+        </a>
+
+        <!-- WhatsApp Inglés -->
+        <a href="https://wa.me/34672031241" target="_blank" aria-label="WhatsApp Inglés" class="transform hover:scale-110 transition">
+          <img src="boton-whatsapp-reino-unido.png" alt="WhatsApp Inglés" class="w-8 h-8 md:w-10 md:h-10 object-contain" loading="lazy" />
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- FLOATING WHATSAPP BUTTONS -->
-  <div class="fixed bottom-4 right-4 flex flex-col gap-3 z-50">
-    <!-- WhatsApp Alemán -->
-    <a href="https://wa.me/34626035354" target="_blank" aria-label="WhatsApp Alemán" class="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full shadow-lg bg-white dark:bg-neutral hover:scale-110 transition">
-      <img src="boton-whatsapp-aleman.png" alt="WhatsApp Alemán" class="w-9 h-9 object-contain pointer-events-none" loading="lazy" />
-    </a>
-
-    <!-- WhatsApp Inglés -->
-    <a href="https://wa.me/34672031241" target="_blank" aria-label="WhatsApp Inglés" class="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full shadow-lg bg-white dark:bg-neutral hover:scale-110 transition">
-      <img src="boton-whatsapp-reino-unido.png" alt="WhatsApp Inglés" class="w-9 h-9 object-contain pointer-events-none" loading="lazy" />
-    </a>
-  </div>
-  
   <!-- SELECTOR DE IDIOMA -->
   <section id="selector-idioma" class="py-4 bg-white border-b dark:bg-neutral">
     <div class="max-w-6xl mx-auto flex items-center justify-center gap-8">
@@ -94,11 +127,11 @@
         <h2 class="text-3xl font-bold text-center mb-10 reveal" data-i18n="services_title">Nuestros servicios</h2>
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <!-- … tarjetas existentes … -->
-                   <!-- 1 -->
+          <!-- 1 -->
           <div class="bg-white dark:bg-neutral rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-[1.03] transition reveal">
-            <img src="3.png" alt="Cortinas de vidrio" class="h-28 w-28 object-contain mb-4" loading="lazy" />
-            <h3 class="text-xl font-semibold mb-2 text-primary" data-i18n="card3_title">Instalación de cortinas de vidrio</h3>
-            <p class="text-sm" data-i18n="card3_desc">Disfruta de vistas panorámicas y protección todo el año con nuestras cortinas de cristal.</p>
+            <img src="1.png" alt="Reformas integrales" class="h-28 w-28 object-contain mb-4" loading="lazy" />
+            <h3 class="text-xl font-semibold mb-2 text-primary" data-i18n="card1_title">Reformas integrales de viviendas</h3>
+            <p class="text-sm" data-i18n="card1_desc">Renovamos tu espacio por completo, cuidando cada detalle y acabados de alta calidad.</p>
           </div>
           <!-- 2 -->
           <div class="bg-white dark:bg-neutral rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-[1.03] transition reveal">
@@ -106,11 +139,11 @@
             <h3 class="text-xl font-semibold mb-2 text-primary" data-i18n="card2_title">Cerramientos en carpintería de aluminio</h3>
             <p class="text-sm" data-i18n="card2_desc">Aislamiento y elegancia para tu hogar con los mejores perfiles de aluminio.</p>
           </div>
-           <!-- 3 -->
+          <!-- 3 -->
           <div class="bg-white dark:bg-neutral rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-[1.03] transition reveal">
-            <img src="1.png" alt="Reformas integrales" class="h-28 w-28 object-contain mb-4" loading="lazy" />
-            <h3 class="text-xl font-semibold mb-2 text-primary" data-i18n="card1_title">Reformas integrales de viviendas</h3>
-            <p class="text-sm" data-i18n="card1_desc">Renovamos tu espacio por completo, cuidando cada detalle y acabados de alta calidad.</p>
+            <img src="3.png" alt="Cortinas de vidrio" class="h-28 w-28 object-contain mb-4" loading="lazy" />
+            <h3 class="text-xl font-semibold mb-2 text-primary" data-i18n="card3_title">Instalación de cortinas de vidrio</h3>
+            <p class="text-sm" data-i18n="card3_desc">Disfruta de vistas panorámicas y protección todo el año con nuestras cortinas de cristal.</p>
           </div>
           <!-- 4 -->
           <div class="bg-white dark:bg-neutral rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-[1.03] transition reveal">
@@ -159,7 +192,7 @@
           <!-- Botón ES / DE -->
           <a href="https://wa.me/34626035354" class="flex items-center gap-3 bg-primary text-white px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
             <img src="boton-whatsapp-aleman.png" alt="WhatsApp Español/Alemán" class="w-6 h-6 object-contain" loading="lazy" />
-            +34 626 03 53 54
+            +34&nbsp;626&nbsp;03&nbsp;53&nbsp;54
             <span class="flex items-center gap-1">
               <img src="lang-es.png" alt="Español"  class="w-5 h-5 object-contain" loading="lazy" />
               <img src="lang-de.png" alt="Deutsch" class="w-5 h-5 object-contain" loading="lazy" />
@@ -169,7 +202,7 @@
           <!-- Botón ES / EN -->
           <a href="https://wa.me/34672031241" class="flex items-center gap-3 bg-primary text-white px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
             <img src="boton-whatsapp-reino-unido.png" alt="WhatsApp Español/Inglés" class="w-6 h-6 object-contain" loading="lazy" />
-            +34 672 03 12 41
+            +34&nbsp;672&nbsp;03&nbsp;12&nbsp;41
             <span class="flex items-center gap-1">
               <img src="lang-es.png" alt="Español" class="w-5 h-5 object-contain" loading="lazy" />
               <img src="lang-en.png" alt="English" class="w-5 h-5 object-contain" loading="lazy" />
@@ -203,9 +236,9 @@
           </div>
           <div class="flex-1 reveal">
             <p class="text-lg leading-relaxed" data-i18n="about_desc">
-              Con años de experiencia en <span class="text-primary font-semibold">instalación de cortinas de vidrio</span>,
-              <span class="text-primary font-semibold">cerramientos de aluminio</span> y
-              <span class="text-primary font-semibold">reformas</span>,
+              Con años de experiencia en <span class="text-primary font-semibold">albañilería</span>,
+              <span class="text-primary font-semibold">cerramientos de aluminio</span> e
+              <span class="text-primary font-semibold">instalación de cortinas de vidrio</span>,
               nuestro equipo se dedica a crear espacios que combinan funcionalidad y estética.
               Tu satisfacción es nuestro mayor orgullo. 💪🏡
             </p>
@@ -225,7 +258,6 @@
   <!-- SCRIPTS -->
   <script>
     /* ---------- Internationalisation ---------- */
-  
     const translations={
       es:{
         brand:"Tu nuevo hogar",tagline:"Atención al detalle en cada proyecto",services_title:"Nuestros servicios",card1_title:"Reformas integrales de viviendas",card1_desc:"Renovamos tu espacio por completo, cuidando cada detalle y acabados de alta calidad.",card2_title:"Cerramientos en carpintería de aluminio",card2_desc:"Aislamiento y elegancia para tu hogar con los mejores perfiles de aluminio.",card3_title:"Instalación de cortinas de vidrio",card3_desc:"Disfruta de vistas panorámicas y protección todo el año con nuestras cortinas de cristal.",card4_title:"Trabajos de fontanería",card4_desc:"Instalaciones y reparaciones confiables con materiales de primera calidad.",card5_title:"Instalaciones eléctricas",card5_desc:"Seguridad y eficiencia energética para tu vivienda.",card6_title:"Carpintería de madera a medida",card6_desc:"Muebles y acabados únicos que reflejan tu estilo personal.",projects_title:"Nuestros proyectos recientes",projects_desc:"Estamos preparando una galería con nuestras últimas obras. ¡Vuelve pronto para inspirarte!",cerramientos_title:"Cerramientos",contact_title:"Contacta con nosotros",location_title:"Nuestra ubicación en Alicante y alrededores",about_title:"Sobre nosotros 👷‍♂",about_desc:"Con años de experiencia en <span class='text-primary font-semibold'>albañilería</span>, <span class='text-primary font-semibold'>cerramientos de aluminio</span> e <span class='text-primary font-semibold'>instalación de cortinas de vidrio</span>, nuestro equipo se dedica a crear espacios que combinan funcionalidad y estética. Tu satisfacción es nuestro mayor orgullo. 💪🏡"},
@@ -254,50 +286,20 @@
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
     /* ---------- CERRAMIENTOS GALLERY ---------- */
-       const cerramientosData=[
-      {folder:'1.0',count:5,videos:{4:'https://www.youtube.com/shorts/y8LEcdlvht0'}},
-      {folder:'2.0',count:7,videos:{1:'https://youtube.com/shorts/Ko_-ksafMe0',5:'https://youtube.com/shorts/v_twrab3yKk'}},
-      {folder:'3.0',count:6,videos:{}},
-      // ... (rest igual)...
-    ];
-
-    function toEmbed(urlOrId){
-      if(!urlOrId) return null;
-      // If full YouTube Shorts URL
-      if(urlOrId.includes('/shorts/')){
-        const id=urlOrId.split('/shorts/')[1].split(/[?&]/)[0];
-        return https://www.youtube.com/embed/${id};
-      }
-      // If full watch?v= URL
-      if(urlOrId.includes('watch?v=')){
-        const id=urlOrId.split('watch?v=')[1].split('&')[0];
-        return https://www.youtube.com/embed/${id};
-      }
-      // Assume plain ID
-      return https://www.youtube.com/embed/${urlOrId};
-    }
+    const cerramientosData=[{folder:'1.0',count:5,videos:[4]},{folder:'2.0',count:7,videos:[1,5]},{folder:'3.0',count:6,videos:[]},{folder:'4.0',count:5,videos:[4,5]},{folder:'5.0',count:6,videos:[6]},{folder:'6.0',count:3,videos:[3]},{folder:'7.0',count:6,videos:[3,4]},{folder:'8.0',count:4,videos:[3]},{folder:'9.0',count:2,videos:[2]},{folder:'10.0',count:5,videos:[3,4]},{folder:'11.0',count:4,videos:[4]},{folder:'12.0',count:3,videos:[]},{folder:'13.0',count:4,videos:[4]},{folder:'14.0',count:3,videos:[3]},{folder:'15.0',count:2,videos:[]},{folder:'16.0',count:2,videos:[2]},{folder:'17.0',count:3,videos:[3]},{folder:'18.0',count:2,videos:[2]},{folder:'19.0',count:2,videos:[]}];
 
     function buildCerramientosGallery(){
-      const gallery=document.getElementById('cerramientos-gallery');
-      if(!gallery) return;
-      const basePath='cerramientos/';
+      const basePath='cerramientos/', gallery=document.getElementById('cerramientos-gallery');
       cerramientosData.forEach(({folder,count,videos})=>{
         const prefix=folder.split('.')[0];
         const row=document.createElement('div');row.className='row-scroll';
         for(let i=1;i<=count;i++){
-          const vidEntry=videos[i];
-          if(vidEntry){
-            const iframe=document.createElement('iframe');
-            iframe.src=toEmbed(vidEntry);
-            iframe.loading='lazy';
-            iframe.allowFullscreen=true;
-            row.appendChild(iframe);
+          const isVideo=videos.includes(i);
+          const file=${basePath}${folder}/${prefix}.${i}.${isVideo?'mp4':'jpg'};
+          if(isVideo){
+            const vid=document.createElement('video');vid.src=file;vid.controls=true;row.appendChild(vid);
           }else{
-            const img=document.createElement('img');
-            img.src=${basePath}${folder}/${prefix}.${i}.jpg;
-            img.alt=Cerramientos ${prefix}.${i};
-            img.loading='lazy';
-            row.appendChild(img);
+            const img=document.createElement('img');img.src=file;img.alt=${translations[document.documentElement.lang].cerramientos_title} ${prefix}.${i};img.loading='lazy';row.appendChild(img);
           }
         }
         gallery.appendChild(row);
