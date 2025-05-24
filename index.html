@@ -52,8 +52,15 @@
         </div>
       </div>
 
-      <!-- Call‑to‑action button -->
-      <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-2xl shadow-md hover:bg-primary/80 transition" data-i18n="contact_button">📞 Contáctanos</a>
+     <!-- Call-to-action button -->
+<a href="#contacto"
+   class="inline-flex sm:inline-flex   <!-- 👈 eliminas `hidden` -->
+          items-center gap-2
+          px-3 sm:px-4  py-2
+          bg-primary text-white rounded-2xl shadow-md
+          text-sm sm:text-base           <!-- texto un poco más pequeño en móvil -->
+          hover:bg-primary/80 transition"
+   data-i18n="contact_button">📞 Contáctanos</a>
     </div>
   </header>
 
