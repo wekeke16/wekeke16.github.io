@@ -453,22 +453,31 @@ document.addEventListener("DOMContentLoaded", buildAluminioGallery);
       {folder:'18.0',count:2,videos:{2:'https://youtube.com/shorts/w8DBuJrkASE?feature=share'}},
       {folder:'19.0',count:2,videos:{}}
     ];
+function toEmbed(urlOrId){
+  if(!urlOrId) return null;
 
-     function toEmbed(urlOrId){
-      if(!urlOrId) return null;
-      // If full YouTube Shorts URL
-      if(urlOrId.includes('/shorts/')){
-        const id=urlOrId.split('/shorts/')[1].split(/[?&]/)[0];
-        return `https://www.youtube.com/embed/${id}`;
-      }
-      // If full watch?v= URL
-      if(urlOrId.includes('watch?v=')){
-        const id=urlOrId.split('watch?v=')[1].split('&')[0];
-        return `https://www.youtube.com/embed/${id}`;
-      }
-      // Assume plain ID
-      return `https://www.youtube.com/embed/${urlOrId}`;
-    }
+  // ► Enlaces cortos youtu.be/XXXXXXXX
+  if (urlOrId.includes('youtu.be/')){
+    const id = urlOrId.split('youtu.be/')[1].split(/[?&]/)[0];
+    return `https://www.youtube.com/embed/${id}`;
+  }
+
+  // ► Formato /shorts/XXXXXXXX
+  if (urlOrId.includes('/shorts/')){
+    const id = urlOrId.split('/shorts/')[1].split(/[?&]/)[0];
+    return `https://www.youtube.com/embed/${id}`;
+  }
+
+  // ► Formato clásico watch?v=XXXXXXXX
+  if (urlOrId.includes('watch?v=')){
+    const id = urlOrId.split('watch?v=')[1].split('&')[0];
+    return `https://www.youtube.com/embed/${id}`;
+  }
+
+  // ► Ya es un ID puro
+  return `https://www.youtube.com/embed/${urlOrId}`;
+}
+
 
     function buildCerramientosGallery(){
       const gallery=document.getElementById('cerramientos-gallery');
