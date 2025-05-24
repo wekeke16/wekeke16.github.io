@@ -52,15 +52,18 @@
         </div>
       </div>
 
-     <!-- Call-to-action button -->
+    <!-- Call-to-action button -->
 <a href="#contacto"
-   class="inline-flex sm:inline-flex   <!-- 👈 eliminas `hidden` -->
-          items-center gap-2
-          px-3 sm:px-4  py-2
+   class="inline-flex flex-col items-center justify-center
+          px-3 sm:px-4 py-2
           bg-primary text-white rounded-2xl shadow-md
-          text-sm sm:text-base           <!-- texto un poco más pequeño en móvil -->
+          text-sm sm:text-base
           hover:bg-primary/80 transition"
-   data-i18n="contact_button">📞 Contáctanos</a>
+   data-i18n="contact_button">
+  <span>Contáctanos</span>
+  <span role="img" aria-label="Teléfono">📞</span>
+</a>
+
     </div>
   </header>
 
