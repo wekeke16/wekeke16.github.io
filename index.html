@@ -434,84 +434,65 @@ function buildAluminioGallery() {
 /* Lanza la galería al cargar la página */
 document.addEventListener("DOMContentLoaded", buildAluminioGallery);
     /* ---------- CERRAMIENTOS GALLERY ---------- */
-    const cortinasData =[
-      {folder:'1.0',count:5,videos:{4:'https://www.youtube.com/watch?v=y8LEcdlvht0&list=PLN8D8df1Sl8FE9inpo20_yH6TRHj3g4HC'}},
-      {folder:'2.0',count:7,videos:{1:'https://youtube.com/shorts/Ko_-ksafMe0?feature=share',5:'https://youtube.com/shorts/v_twrab3yKk?feature=share'}},
-      {folder:'3.0',count:6,videos:{}},
-      {folder:'4.0',count:5,videos:{4:'https://youtube.com/shorts/c4qTL4I0VoU?feature=share',5:'https://youtube.com/shorts/0_W0DUAi9BA?feature=share'}},
-      {folder:'5.0',count:6,videos:{6:'https://youtube.com/shorts/RhlGepS9TSM?feature=share'}},
-      {folder:'6.0',count:3,videos:{3:'https://youtube.com/shorts/DwCUUxTB9rI?feature=share'}},
-      {folder:'7.0',count:6,videos:{3:'https://youtube.com/shorts/KFMG_xcLFbI?feature=share',4:'https://youtube.com/shorts/LvDBD0Plnt0?feature=share'}},
-      {folder:'8.0',count:4,videos:{3:'https://youtube.com/shorts/7ngyE7vk_lo?feature=share'}},
-      {folder:'9.0',count:2,videos:{2:'https://youtube.com/shorts/Eit6p8wmHRY?feature=share'}},
-      {folder:'10.0',count:5,videos:{3:'https://youtube.com/shorts/Lhgg3y54tfI?feature=share',4:'https://youtube.com/shorts/3EAJvW6_HXk?feature=share'}},
-      {folder:'11.0',count:4,videos:{4:'https://youtube.com/shorts/UYIEXoVm7Ng?feature=share'}},
-      {folder:'12.0',count:3,videos:{}},
-      {folder:'13.0',count:4,videos:{4:'https://youtube.com/shorts/EASDEM5PNVQ?feature=share'}},
-      {folder:'14.0',count:3,videos:{3:'https://youtube.com/shorts/R-ravYxrNCc?feature=share'}},
-      {folder:'15.0',count:2,videos:{}},
-      {folder:'16.0',count:2,videos:{2:'https://youtube.com/shorts/6ToQjCu_GaQ?feature=share'}},
-      {folder:'17.0',count:3,videos:{3:'https://youtu.be/sYseG5T6Ee8'}},
-      {folder:'18.0',count:2,videos:{2:'https://youtube.com/shorts/w8DBuJrkASE?feature=share'}},
-      {folder:'19.0',count:2,videos:{}}
-    ];
-function toEmbed(urlOrId){
-  if(!urlOrId) return null;
+  const cortinasData = [
+    { folder: '1.0', count: 5, videos: { 4: 'https://www.youtube.com/watch?v=y8LEcdlvht0&list=PLN8D8df1Sl8FE9inpo20_yH6TRHj3g4HC' } },
+    { folder: '2.0', count: 7, videos: { 1: 'https://youtube.com/shorts/Ko_-ksafMe0?feature=share', 5: 'https://youtube.com/shorts/v_twrab3yKk?feature=share' } },
+    { folder: '3.0', count: 6, videos: {} },
+    { folder: '4.0', count: 5, videos: { 4: 'https://youtube.com/shorts/c4qTL4I0VoU?feature=share', 5: 'https://youtube.com/shorts/0_W0DUAi9BA?feature=share' } },
+    { folder: '5.0', count: 6, videos: { 6: 'https://youtube.com/shorts/RhlGepS9TSM?feature=share' } },
+    { folder: '6.0', count: 3, videos: { 3: 'https://youtube.com/shorts/DwCUUxTB9rI?feature=share' } },
+    { folder: '7.0', count: 6, videos: { 3: 'https://youtube.com/shorts/KFMG_xcLFbI?feature=share', 4: 'https://youtube.com/shorts/LvDBD0Plnt0?feature=share' } },
+    { folder: '8.0', count: 4, videos: { 3: 'https://youtube.com/shorts/7ngyE7vk_lo?feature=share' } },
+    { folder: '9.0', count: 2, videos: { 2: 'https://youtube.com/shorts/Eit6p8wmHRY?feature=share' } },
+    { folder: '10.0', count: 5, videos: { 3: 'https://youtube.com/shorts/Lhgg3y54tfI?feature=share', 4: 'https://youtube.com/shorts/3EAJvW6_HXk?feature=share' } },
+    { folder: '11.0', count: 4, videos: { 4: 'https://youtube.com/shorts/UYIEXoVm7Ng?feature=share' } },
+    { folder: '12.0', count: 3, videos: {} },
+    { folder: '13.0', count: 4, videos: { 4: 'https://youtube.com/shorts/EASDEM5PNVQ?feature=share' } },
+    { folder: '14.0', count: 3, videos: { 3: 'https://youtube.com/shorts/R-ravYxrNCc?feature=share' } },
+    { folder: '15.0', count: 2, videos: {} },
+    { folder: '16.0', count: 2, videos: { 2: 'https://youtube.com/shorts/6ToQjCu_GaQ?feature=share' } },
+    { folder: '17.0', count: 3, videos: { 3: 'https://youtu.be/sYseG5T6Ee8' } },
+    { folder: '18.0', count: 2, videos: { 2: 'https://youtube.com/shorts/w8DBuJrkASE?feature=share' } },
+    { folder: '19.0', count: 2, videos: {} }
+  ];
 
-  // ► Enlaces cortos youtu.be/XXXXXXXX
-  if (urlOrId.includes('youtu.be/')){
-    const id = urlOrId.split('youtu.be/')[1].split(/[?&]/)[0];
+  function toEmbed(url) {
+    let id;
+    if (url.includes('youtu.be/'))      id = url.split('youtu.be/')[1].split(/[?&]/)[0];
+    else if (url.includes('/shorts/'))  id = url.split('/shorts/')[1].split(/[?&]/)[0];
+    else if (url.includes('watch?v='))  id = url.split('watch?v=')[1].split('&')[0];
+    else                                id = url;
     return `https://www.youtube.com/embed/${id}`;
   }
 
-  // ► Formato /shorts/XXXXXXXX
-  if (urlOrId.includes('/shorts/')){
-    const id = urlOrId.split('/shorts/')[1].split(/[?&]/)[0];
-    return `https://www.youtube.com/embed/${id}`;
-  }
-
-  // ► Formato clásico watch?v=XXXXXXXX
-  if (urlOrId.includes('watch?v=')){
-    const id = urlOrId.split('watch?v=')[1].split('&')[0];
-    return `https://www.youtube.com/embed/${id}`;
-  }
-
-  // ► Ya es un ID puro
-  return `https://www.youtube.com/embed/${urlOrId}`;
-}
-
-
-function buildCortinasGallery() {
-  const gallery = document.getElementById('cortinas-gallery');
-  if (!gallery) return;
-
-  const basePath = 'cortinas de cristal/';   // nueva carpeta
-  cortinasData.forEach(({ folder, count, videos }) => {
-    const prefix = folder.split('.')[0];
-    const row = document.createElement('div');
-    row.className = 'row-scroll';
-
-    for (let i = 1; i <= count; i++) {
-      if (videos[i]) {
-        const iframe = document.createElement('iframe');
-        iframe.src = toEmbed(videos[i]);
-        iframe.loading = 'lazy';
-        iframe.allowFullscreen = true;
-        row.appendChild(iframe);
-      } else {
-        const img = document.createElement('img');
-        img.src = `${basePath}${folder}/${prefix}.${i}.jpg`;
-        img.alt = `Cortina ${prefix}.${i}`;
-        img.loading = 'lazy';
-        row.appendChild(img);
+  function buildCortinasGallery() {
+    const gallery = document.getElementById('cortinas-gallery');
+    if (!gallery) return;
+    const basePath = 'cortinas de cristal/'; // el nombre exacto de la carpeta
+    cortinasData.forEach(({ folder, count, videos }) => {
+      const prefix = folder.split('.')[0];
+      const row = document.createElement('div');
+      row.className = 'row-scroll';
+      for (let i = 1; i <= count; i++) {
+        if (videos[i]) {
+          const iframe = document.createElement('iframe');
+          iframe.src = toEmbed(videos[i]);
+          iframe.loading = 'lazy';
+          iframe.allowFullscreen = true;
+          row.appendChild(iframe);
+        } else {
+          const img = document.createElement('img');
+          img.src = `${basePath}${folder}/${prefix}.${i}.jpg`;
+          img.alt = `Cortina ${prefix}.${i}`;
+          img.loading = 'lazy';
+          row.appendChild(img);
+        }
       }
-    }
-    gallery.appendChild(row);
-  });
-}
+      gallery.appendChild(row);
+    });
+  }
 
-document.addEventListener('DOMContentLoaded', buildCortinasGallery);
-
-  </script>
+  document.addEventListener('DOMContentLoaded', buildCortinasGallery);
+</script>
 </body>
 </html>
