@@ -169,13 +169,11 @@
     </p>
 
     <div class="space-y-8">
-      <!-- SUBSECCIÓN CERRAMIENTOS -->
-      <details id="cerramientos" class="mt-8 bg-white dark:bg-neutral rounded-2xl p-4 reveal">
-        <summary class="text-xl font-semibold" data-i18n="cerramientos_title">
-          Cerramientos
-        </summary>
-        <div id="cerramientos-gallery" class="mt-6 space-y-8"></div>
-      </details>
+      <!-- SUBSECCIÓN CORTINAS DE CRISTAL -->
+    <details id="cortinas-de-cristal" class="mt-8 bg-white dark:bg-neutral rounded-2xl p-4 reveal" open>
+  <summary class="text-xl font-semibold" data-i18n="cortinas_title">Cortinas de cristal</summary>
+  <div id="cortinas-gallery" class="mt-6 space-y-8"></div>
+</details>
 
       <!-- SUBSECCIÓN CERRAMIENTOS EN ALUMINIO -->
       <details id="aluminio" class="mt-8 bg-white dark:bg-neutral rounded-2xl p-4 reveal">
@@ -436,7 +434,7 @@ function buildAluminioGallery() {
 /* Lanza la galería al cargar la página */
 document.addEventListener("DOMContentLoaded", buildAluminioGallery);
     /* ---------- CERRAMIENTOS GALLERY ---------- */
-    const cerramientosData=[
+    const cortinasData =[
       {folder:'1.0',count:5,videos:{4:'https://www.youtube.com/watch?v=y8LEcdlvht0&list=PLN8D8df1Sl8FE9inpo20_yH6TRHj3g4HC'}},
       {folder:'2.0',count:7,videos:{1:'https://youtube.com/shorts/Ko_-ksafMe0?feature=share',5:'https://youtube.com/shorts/v_twrab3yKk?feature=share'}},
       {folder:'3.0',count:6,videos:{}},
@@ -483,33 +481,37 @@ function toEmbed(urlOrId){
 }
 
 
-    function buildCerramientosGallery(){
-      const gallery=document.getElementById('cerramientos-gallery');
-      if(!gallery) return;
-      const basePath='cerramientos/';
-      cerramientosData.forEach(({folder,count,videos})=>{
-        const prefix=folder.split('.')[0];
-        const row=document.createElement('div');row.className='row-scroll';
-        for(let i=1;i<=count;i++){
-          const vidEntry=videos[i];
-          if(vidEntry){
-            const iframe=document.createElement('iframe');
-            iframe.src=toEmbed(vidEntry);
-            iframe.loading='lazy';
-            iframe.allowFullscreen=true;
-            row.appendChild(iframe);
-          }else{
-            const img=document.createElement('img');
-            img.src=`${basePath}${folder}/${prefix}.${i}.jpg`;
-            img.alt=`Cerramientos ${prefix}.${i}`;
-            img.loading='lazy';
-            row.appendChild(img);
-          }
-        }
-        gallery.appendChild(row);
-      });
+function buildCortinasGallery() {
+  const gallery = document.getElementById('cortinas-gallery');
+  if (!gallery) return;
+
+  const basePath = 'cortinas de cristal/';   // nueva carpeta
+  cortinasData.forEach(({ folder, count, videos }) => {
+    const prefix = folder.split('.')[0];
+    const row = document.createElement('div');
+    row.className = 'row-scroll';
+
+    for (let i = 1; i <= count; i++) {
+      if (videos[i]) {
+        const iframe = document.createElement('iframe');
+        iframe.src = toEmbed(videos[i]);
+        iframe.loading = 'lazy';
+        iframe.allowFullscreen = true;
+        row.appendChild(iframe);
+      } else {
+        const img = document.createElement('img');
+        img.src = `${basePath}${folder}/${prefix}.${i}.jpg`;
+        img.alt = `Cortina ${prefix}.${i}`;
+        img.loading = 'lazy';
+        row.appendChild(img);
+      }
     }
-    document.addEventListener('DOMContentLoaded',buildCerramientosGallery);
+    gallery.appendChild(row);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', buildCortinasGallery);
+
   </script>
 </body>
 </html>
